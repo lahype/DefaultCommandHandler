@@ -1,9 +1,8 @@
 const Discord = require('discord.js')
-exports.run = (bot, msg) => {
-
+exports.run = async (bot, msg) => {
     const AvatarEmbed = new Discord.MessageEmbed()
-    msg.channel.send(AvatarEmbed
-        .setColor(bot.config.PrimaryColor) 
+    await msg.channel.send(AvatarEmbed
+        .setColor('RED')
         .setDescription(`And here it is!\nOr [click here](${msg.author.displayAvatarURL()}).`)
         .setThumbnail(msg.author.displayAvatarURL())
     )
